@@ -1,7 +1,8 @@
+var q=0,
+_sor=document.getElementById("musicList"),
+_player = document.getElementById("player"),
+countUpdate=0;
 
-var q=0;
-var _sor=document.getElementById("musicList");
-var _player = document.getElementById("player");
 window.onload = function() {
     // TODO:: Do your initialization job
 
@@ -29,27 +30,11 @@ window.onload = function() {
     	//alert(1);
     });
     document.getElementById("player").addEventListener("ended", playNext);
-    /*var audio1=document.getElementById('level13');
-    
-	audio1.addEventListener("ended", function() {
-	    q=0;
-	});
-    var audio2=document.getElementById('level12');
-    
-	audio2.addEventListener("ended", function() {
-	    q=0;
-	});
-    var audio3=document.getElementById('level11');
-    
-	audio3.addEventListener("ended", function() {
-	    q=0;
-	});*/
-	
-	
-    	
-       //$( "#sortablePlaylist" ).sortable();
        $( "#sortablePlaylist" ).sortable({
-    	   update: function( event, ui ) {}
+    	   change: function( event, ui ) {
+    		   countUpdate++;
+    		   $("#count").html(countUpdate);
+    	   }
     	 });
 };
 
@@ -61,37 +46,17 @@ function playlistItemClick(clickedElement) {
         selected.classList.remove("selected");
     }
     clickedElement.classList.add("selected");
-
-    _player2.src = clickedElement.getAttribute("src");
-    _player2.play();
+    if(clickedElement.id=="playSortList"){
+    	var sortedIDs = $( "#sortablePlaylist" ).sortable( "toArray" );
+    	alert(sortedIDs[0]);
+    	q=0;
+    	
+    }
+    else{
+    	_player2.src = clickedElement.getAttribute("src");
+    	_player2.play();
+    }
 }
 function playNext(){
 	q=0;
-	//alert(q);
 }
-
-/*
-function playItem1(){
-	var audio=document.getElementById('level13');
-	if(q==0){
-		
-		q++;
-		audio.play();
-	};
-}
-function playItem2(){
-	var audio=document.getElementById('level11');
-	if(q==0){
-		
-		q++;
-		audio.play();
-	};
-}
-function playItem3(){
-	var audio=document.getElementById('level11');
-	if(q==0){
-		
-		q++;
-		audio.play();
-	};
-}*/
