@@ -28,8 +28,23 @@ window.onload = function() {
     		q++;
     		playlistItemClick(e.target);
     	}
-    	//alert(1);
     });
+       /*document.getElementById("reSortList").addEventListener('click', function(e) {
+    	   alert(q);
+    	   if(q==0){
+    		   $( "#sortablePlaylist" ).sortable("destroy");
+    	       $( "#sortablePlaylist" ).sortable({
+    	    	   change: function( event, ui ) {
+    	    		   countUpdate++;
+    	    		   $("#count").html(countUpdate);
+    	    	   }
+    	    	 });
+    		   $("#count").html(0);
+    		   countUpdate=0;
+    		   iMus=0;
+    	   }
+    	//alert(1);
+    });*/
     document.getElementById("player").addEventListener("ended", function(e) {
     	//alert("Event Listener "+iMus);
         if (iMus>0) {
@@ -38,6 +53,7 @@ window.onload = function() {
             	else {
             		alert("Congrats you win!Your score : "+countUpdate+" .");
             		iMus=0;
+            		countUpdate=0;
             }
           }
         else     	playNext();

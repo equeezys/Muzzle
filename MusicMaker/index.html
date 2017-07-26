@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/equeery.min.css">
 	<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
 	
-	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css" /> 
     
-    <script src="js/jquery.js"></script>
+    <script src="jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.custom2.js"></script>
 	<script src="js/jquery.ui.touch-punch.js"></script>
 	
@@ -33,7 +33,7 @@
 		</header>
         <div data-role="main" class="ui-content">
         	<ul>
-            	<li><a href="#level" class="ui-btn">Play</a></li>
+            	<li><a href="#levelsmenu" class="ui-btn">Play</a></li>
             	<li><a href="#options" class="ui-btn">Options</a></li>
             	
           </ul>
@@ -65,12 +65,13 @@
 			  <li class="ui-btn" onclick="playItem3()" ><div class="ui-icon"><audio id="level12" src="src/level1/set2.wav"></audio></div>Item 2</li>
 			  <li class="ui-btn" onclick="document.getElementById('level10').play()" ><div class="ui-icon"><audio id="level10" src="src/level1/set0.wav"></audio></div>Item 3</li>-->
 		</ul>
-		<button class="ui-btn" " src="src/level1/setall.wav">Item4</button>
-		<button class="ui-btn" " src="" id="playSortList" >Item5</button>
+		<button class="ui-btn" " src="src/level1/setall.wav">Music</button>
+		<button class="ui-btn" " src="" id="playSortList" >Play</button>
 		</div>
 		<div id="count" class="ui-body-a" align="center">0</div>
-		<!--  <button class="ui-btn" onclick="document.getElementById('player').play()" ><div class="ui-icon"><audio id="player" src="src/level1/setall.wav"></audio></div>Item 1</button>-->
+		<!--  <button class="ui-btn" "  id="reSortList" >Refresh</button>-->
         </div>
+        
     </div> <!-- page one  -->
     
        	<div data-role="page"  id="options">
@@ -79,9 +80,24 @@
      		 <h1>Level 1</h1>
   		  </hgroup>
 		</header>
-        <div data-role="main" class="ui-content">
+        <div data-role="main">
         </div>
-    </div> <!-- page one  -->
+    </div> <!-- page two  -->
+    
+       	<div data-role="page"  id="levelsmenu">
+		<header data-role="header" style="allign:center">
+  		  <hgroup>
+     		 <h1>Level 1</h1>
+  		  </hgroup>
+		</header>
+        <div data-role="main">
+   			<ul>
+            	<li><a href="#level" class="ui-btn">Level1</a></li>
+            	<li><a href="#level2" class="ui-btn">Level2</a></li>
+            		
+       		</ul>
+        </div>
+    </div> <!-- page two  -->
     
 </body>
 </html>
