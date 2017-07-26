@@ -215,12 +215,6 @@ html .ui-alt-icon .ui-radio-off:after {
 .ui-alt-icon .ui-btn.ui-radio-on:after {
 	background-color: #000;
 }
-  #sortablePlaylist { list-style-type: none; margin:  0px 0px 100px 0px; padding: 0; width: 55%; display: inline-block; }
-  #sortablePlaylist li { margin: 0px 10px 3px 10px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortablePlaylist li span {  margin-left: -1.3em; }
-   #sortable1 { list-style-type: none; margin: 0; padding: 0; width: 40%; display: inline-block; }
-  #sortable1 li { margin: 0 10px 3px 0px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-  #sortable1 li span {margin-left: -1.3em; }
 /* Loader */
 .ui-icon-loading {
 	background: url("images/ajax-loader.gif");

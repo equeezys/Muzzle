@@ -9,10 +9,11 @@
     <title>Tizen Mobile Web Basic Application</title>
 
     
-    <link rel="stylesheet" href="css/equeery.min.css">
+    <link rel="stylesheet" href="css/honeq.min.css">
 	<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
 	
-	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css" /> 
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css" />
+	<link rel="stylesheet" href="css/style.css" />  
     
     <script src="jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.custom2.js"></script>
@@ -27,12 +28,12 @@
 	<div data-role="page"  id="one">
 		<header data-role="header">
   		  <hgroup>
-     		 <h1>MusicMaker 1.0</h1>
-     		 <h2>Menu</h2>
+     		 <h1 align="center">MusicMaker 1.0</h1>
+     		 <h2 align="center">Menu</h2>
   		  </hgroup>
 		</header>
-        <div data-role="main" class="ui-content">
-        	<ul>
+        <div data-role="main" class="ui-content" >
+        	<ul data-role="listview">
             	<li><a href="#levelsmenu" class="ui-btn">Play</a></li>
             	<li><a href="#options" class="ui-btn">Options</a></li>
             	
@@ -46,7 +47,7 @@
     	<div data-role="page"  id="level">
 		<header data-role="header" style="allign:center">
   		  <hgroup>
-     		 <h1>Level 1</h1>
+     		 <h1 align="center">Level 1</h1>
   		  </hgroup>
 		</header>
         <div data-role="main" class="ui-content">
@@ -55,7 +56,7 @@
   			Your browser does not support the audio format.
         </audio>
         <div id ="musicList" >
-        <ul id ="sortablePlaylist" >
+        <ul id ="sortablePlaylist" class="sortablePlaylist">
         		<li class="ui-state-default" id="item1" src="src/level1/set1.wav"><span class="ui-btn" src="src/level1/set1.wav">Sound 0</span></li>
         		<li class="ui-state-default" id="item2" src="src/level1/set2.wav"><span class="ui-btn" " src="src/level1/set2.wav">Sound 1</span></li>
         		<li class="ui-state-default" id="item0" src="src/level1/set0.wav"><span class="ui-btn" " src="src/level1/set0.wav">Sound 2</span></li>
@@ -72,32 +73,63 @@
 		<!--  <button class="ui-btn" "  id="reSortList" >Refresh</button>-->
         </div>
         
-    </div> <!-- page one  -->
+    </div> <!-- page Level 1  -->
+    
+    	<div data-role="page"  id="level2">
+		<header data-role="header" style="allign:center">
+  		  <hgroup>
+     		 <h1 align="center">Level 2</h1>
+  		  </hgroup>
+		</header>
+        <div data-role="main" class="ui-content">
+        <audio class="player">
+          <source id="audioSource" src=""></source>
+  			Your browser does not support the audio format.
+        </audio>
+        <div id ="musicList" >
+        <ul id ="sortablePlaylist" class="sortablePlaylist">
+        		<li class="ui-state-default" id="item1" src="src/level2/set1.wav"><span class="ui-btn" src="src/level2/set1.wav">Sound 0</span></li>
+        		<li class="ui-state-default" id="item2" src="src/level2/set2.wav"><span class="ui-btn" " src="src/level2/set2.wav">Sound 1</span></li>
+        		<li class="ui-state-default" id="item0" src="src/level2/set0.wav"><span class="ui-btn" " src="src/level2/set0.wav">Sound 2</span></li>
+        	 <!-- <li class="ui-btn" onclick="playItem1();" ><div class="ui-icon"><audio id="level13" ></audio></div>Item 0</li> <!-- document.getElementById('level13').play()
+			    <li class="ui-btn" onclick="playItem2()" ><div class="ui-icon"><audio id="level11" src="src/level1/set1.wav"></audio></div>Item 1</li>
+			  <li class="ui-btn" onclick="playItem3()" ><div class="ui-icon"><audio id="level12" src="src/level1/set2.wav"></audio></div>Item 2</li>
+			  <li class="ui-btn" onclick="document.getElementById('level10').play()" ><div class="ui-icon"><audio id="level10" src="src/level1/set0.wav"></audio></div>Item 3</li>-->
+		</ul>
+		<button class="ui-btn" " src="src/level1/setall.wav">Music</button>
+		<button class="ui-btn" " src="" id="playSortList" >Play</button>
+		</div>
+		<div id="count" class="ui-body-a" align="center">0</div>
+		<!--  <button class="ui-btn" "  id="reSortList" >Refresh</button>-->
+        </div>
+        
+    </div> <!-- page Level2  -->
+    
     
        	<div data-role="page"  id="options">
 		<header data-role="header" style="allign:center">
   		  <hgroup>
-     		 <h1>Level 1</h1>
+     		 <h1 align="center">Options</h1>
   		  </hgroup>
 		</header>
         <div data-role="main">
         </div>
-    </div> <!-- page two  -->
+    </div> <!-- page options  -->
     
        	<div data-role="page"  id="levelsmenu">
 		<header data-role="header" style="allign:center">
   		  <hgroup>
-     		 <h1>Level 1</h1>
+     		 <h1 align="center">Levels </h1>
   		  </hgroup>
 		</header>
         <div data-role="main">
-   			<ul>
+   			<ul  data-role="listview">
             	<li><a href="#level" class="ui-btn">Level1</a></li>
             	<li><a href="#level2" class="ui-btn">Level2</a></li>
             		
        		</ul>
         </div>
-    </div> <!-- page two  -->
+    </div> <!-- page levelsmenu  -->
     
 </body>
 </html>
